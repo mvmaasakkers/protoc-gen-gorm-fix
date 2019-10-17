@@ -1,6 +1,6 @@
 # protoc-gen-gorm
 
-# This is a fork op [protoc-gen-gorm by infoblox](https://github.com/infobloxopen/protoc-gen-gorm/) with just gomod support! 
+# This is a fork of [protoc-gen-gorm by infoblox](https://github.com/infobloxopen/protoc-gen-gorm/) with gomod support and updated dependencies 
 
 ### Purpose
 

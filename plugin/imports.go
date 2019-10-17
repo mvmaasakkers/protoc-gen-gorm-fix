@@ -111,7 +111,7 @@ func (p *OrmPlugin) GenerateImports(file *generator.FileDescriptor) {
 	githubImports := imports.packages
 	sort.Strings(imports.stdImports)
 	for _, dep := range imports.stdImports {
-		p.PrintImport(dep, dep)
+		p.PrintImport(generator.GoPackageName(dep), generator.GoImportPath(dep))
 	}
 	p.P()
 	aliases := []string{}
@@ -120,7 +120,7 @@ func (p *OrmPlugin) GenerateImports(file *generator.FileDescriptor) {
 	}
 	sort.Strings(aliases)
 	for _, a := range aliases {
-		p.PrintImport(a, githubImports[a].packagePath)
+		p.PrintImport(generator.GoPackageName(a), generator.GoImportPath(githubImports[a].packagePath))
 	}
 	p.P()
 }
